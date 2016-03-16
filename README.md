@@ -1,5 +1,6 @@
 # gosensors
-Go bindings for libsensors.so from the lm-sensors project via cgo.
+Go bindings for libsensors.so from the lm-sensors project via cgo.  At the moment, this fork simply pulls from md14454/gosensors but fixes struct_ prefix bugs in the cgo bindings
+
 ### Example
 ``` go
 package main
@@ -7,7 +8,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/md14454/gosensors"
+	"github.com/eskibars/gosensors"
 )
 
 func main() {
