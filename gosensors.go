@@ -17,7 +17,7 @@ type SubFeature struct {
 	Type    int32
 	Mapping int32
 	Flags   uint32
-	chip    *C.struct_sensors_chip_name
+	chip    *C.sensors_chip_name
 }
 
 func (s SubFeature) GetValue() float64 {
@@ -32,8 +32,8 @@ type Feature struct {
 	Name    string
 	Number  int32
 	Type    int32
-	chip    *C.struct_sensors_chip_name
-	feature *C.struct_sensors_feature
+	chip    *C.sensors_chip_name
+	feature *C.sensors_feature
 }
 
 func (f Feature) GetSubFeatures() []SubFeature {
@@ -74,7 +74,7 @@ func (f Feature) GetValue() float64 {
 type Bus struct {
 	Type int16
 	Nr   int16
-	bus  *C.struct_sensors_bus_id
+	bus  *C.sensors_bus_id
 }
 
 func (b Bus) String() string {
@@ -90,7 +90,7 @@ type Chip struct {
 	Bus    Bus
 	Addr   int32
 	Path   string
-	chip   *C.struct_sensors_chip_name
+	chip   *C.sensors_chip_name
 }
 
 func (c Chip) String() string {
